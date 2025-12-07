@@ -1,55 +1,82 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT:
+     Version change: N/A → 1.0.0
+     Modified principles: N/A (new constitution)
+     Added sections: All principles and sections below
+     Removed sections: Template placeholders
+     Templates requiring updates: N/A
+     Follow-up TODOs: None
+-->
+
+# Physical AI & Humanoid Robotics Textbook Constitution
+
+**Project**: Physical AI & Humanoid Robotics Textbook  
+(A book built with Docusaurus and deployed to GitHub Pages using Spec-Kit Plus and Claude Code)
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Accuracy through Primary Source Verification
+MUST verify all factual claims through primary sources and cross-referencing with established robotics and AI literature. All content must be traceable to reputable sources.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clarity for Technical Audiences
+MUST write with clarity for an academic and technical audience (students, researchers, and practitioners in AI, robotics, mechanical engineering, and related fields). Content should be accessible at a Flesch-Kincaid grade level of 12-14.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Comprehensive Coverage
+MUST provide comprehensive coverage of foundational concepts, state-of-the-art methods, and practical applications in physical AI and humanoid robotics. Content must include emerging trends as of December 2025 and beyond.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Educational Focus
+MUST maintain an educational focus with real-world examples, exercises, code snippets, and interactive elements where possible. Each chapter must include learning objectives, key concepts with citations, and end-of-chapter exercises.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Source Verification and Citation Standards
+MUST cite sources in IEEE style (numeric references with full bibliography) with minimum 50% peer-reviewed journal articles and conference papers (e.g., ICRA, IROS, RSS, Science Robotics, IJRR). The remainder may include authoritative textbooks, technical reports, and credible industry whitepapers.
 
-### [PRINCIPLE_6_NAME]
+### VI. Zero Plagiarism Standard
+MUST maintain zero tolerance for plagiarism before final deployment. All content must pass plagiarism detection tools such as Turnitin, GPTZero, or Copyleaks.
 
+## Key Standards
 
-[PRINCIPLE__DESCRIPTION]
+### Technical Implementation
+- Format: Static website built with Docusaurus, deployed via GitHub Pages
+- Tool usage: Spec-Kit Plus for spec-driven development and repository structure; Claude Code for generating verifiable code examples, diagrams (Mermaid/PlantUML), and simulation snippets
+- All code examples must execute correctly and be licensed openly (MIT or Apache 2.0)
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Content Structure
+- Minimum 10 chapters as outlined in the project specification
+- Each chapter must include: Learning objectives, Key concepts with citations, Code examples (Python/ROS2 where applicable), Diagrams and illustrations, End-of-chapter exercises or discussion questions
+- Interactive elements: CodeSandbox/Colab links, embedded Mermaid diagrams, and links to open-source simulators when relevant
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Constraints
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Repository Structure
+- Repository must follow Spec-Kit Plus template structure with specifications as first-class artifacts
+- Content must be organized to enable modular development and review
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Quality Gates
+- 100% of technical claims must be verified against cited sources
+- All content must pass plagiarism checks before deployment
+- Successful deployment to GitHub Pages with full functionality (search, dark mode, responsive design, fast loading)
+
+### Compliance Requirements
+- Full alignment with Spec-Kit Plus workflow: every piece of content traceable to an approved specification
+- Positive internal review for educational value, depth, and completeness
+
+## Success Criteria
+
+### Content Quality
+- 100% of technical claims verified against cited sources
+- Zero plagiarism detected on final content
+
+### Technical Performance
+- Successful deployment to GitHub Pages with full functionality (search, dark mode, responsive design, fast loading)
+- All code examples execute correctly and are licensed openly (MIT or Apache 2.0)
+
+### Educational Impact
+- Positive internal review for educational value, depth, and completeness
+- Full alignment with Spec-Kit Plus workflow: every piece of content traceable to an approved specification
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices for this project. Amendments require documentation, approval, and migration plan.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All PRs/reviews must verify compliance with these principles. Complexity must be justified with clear educational or technical rationale.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07
