@@ -1,0 +1,66 @@
+#usda 1.0
+(
+    doc = "Factory environment for Isaac Sim"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "environment_factory"
+{
+    def Xform "factory_floor"
+    {
+        def Plane "floor_plane"
+        {
+            double size = 20.0
+            color3f[] displayColor = [(0.4, 0.4, 0.4)]
+        }
+    }
+    
+    def Xform "factory_walls"
+    {
+        def Cube "wall_north"
+        {
+            vector3f size = (20, 5, 1)
+            double3 xformOp:translate = (0, 2.5, 10)
+            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+        }
+        
+        def Cube "wall_south"
+        {
+            vector3f size = (20, 5, 1)
+            double3 xformOp:translate = (0, 2.5, -10)
+            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+        }
+        
+        def Cube "wall_east"
+        {
+            vector3f size = (1, 5, 20)
+            double3 xformOp:translate = (10, 2.5, 0)
+            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+        }
+        
+        def Cube "wall_west"
+        {
+            vector3f size = (1, 5, 20)
+            double3 xformOp:translate = (-10, 2.5, 0)
+            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+        }
+    }
+    
+    def Xform "factory_objects"
+    {
+        def Cube "table_1"
+        {
+            vector3f size = (2, 1, 1)
+            double3 xformOp:translate = (5, 0.5, 3)
+            color3f[] displayColor = [(0.8, 0.6, 0.2)]
+        }
+        
+        def Sphere "ball_1"
+        {
+            double radius = 0.3
+            double3 xformOp:translate = (-3, 0.3, -4)
+            color3f[] displayColor = [(1.0, 0.0, 0.0)]
+        }
+    }
+}
