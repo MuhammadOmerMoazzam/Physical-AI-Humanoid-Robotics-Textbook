@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+title: "Hardware Requirements (2025 Edition)"
+---
+
+# Hardware Requirements – 2025 Edition
+
+| Component         | Minimum (Still Works)          | Recommended (Smooth)            | Dream Rig (2026-proof)         | Notes |
+|-------------------|--------------------------------|---------------------------------|--------------------------------|-------|
+| GPU               | RTX 4070 Ti (12 GB)            | RTX 4080 / 4090 (24 GB)         | RTX 5090 (32 GB)               | Isaac Sim will NOT run without RTX |
+| CPU               | 12th Gen i7 / Ryzen 7 5800X    | 13th–15th Gen i9 / Ryzen 9 7950X| Threadripper 7960X+            | Physics is heavily CPU-bound |
+| RAM               | 32 GB DDR5                     | 64 GB DDR5                      | 128 GB DDR5                    | Complex scenes + LLM inference |
+| Storage           | 1 TB NVMe                      | 2 TB NVMe                       | 4 TB NVMe                      | Isaac Sim assets are huge |
+| OS                | Ubuntu 22.04 LTS               | Ubuntu 22.04 LTS                | Ubuntu 24.04 LTS (when stable) | ROS 2 Iron/Humble native |
+| Display           | 1920×1080                      | 3440×1440 ultrawide             | 4K 144 Hz                      | For RViz + Foxglove |
+
+**Real-world tested configs (Dec 2025):**
+- Framework 16 (RTX 4080, 64 GB) → perfect
+- Lenovo Legion Pro 7i Gen 9 (RTX 4090, 64 GB) → best price/performance
+- Apple Silicon → not supported (no CUDA, no Isaac Sim)
+
+> Bottom line: If you only upgrade one thing → **64 GB RAM + RTX 4080/4090**. Everything else is negotiable.
