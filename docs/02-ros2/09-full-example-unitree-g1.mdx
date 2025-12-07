@@ -1,0 +1,22 @@
+---
+sidebar_position: 9
+title: "Full Working Example – Unitree G1 in 180 Lines"
+---
+
+# Complete Working Package
+
+```bash
+colcon build --packages-select ros2_humanoid_template
+source install/setup.bash
+ros2 launch ros2_humanoid_template spawn_humanoid.launch.py robot:=g1
+```
+
+You now have:
+- Real-time joint control
+- Safety watchdog
+- RViz + Foxglove visualization
+- One-click switch between Isaac Sim and real Unitree G1
+
+**Full source:** `src/ros2_humanoid_template/` (already in this repo)
+
+**Congratulations** — you just graduated from "ROS 2 user" to "humanoid robotics engineer."

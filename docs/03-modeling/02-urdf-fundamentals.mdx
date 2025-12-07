@@ -1,0 +1,24 @@
+---
+sidebar_position: 2
+title: "URDF Crash Course – The Only Rules That Matter in 2025"
+---
+
+# URDF in 2025 – What Actually Matters
+
+| Rule                      | Why It Breaks 99 % of Newcomers               |
+|---------------------------|-----------------------------------------------|
+| Use `.xacro` always       | No more copy-paste hell                       |
+| Inertias are mandatory    | Wrong COM → your robot falls in sim           |
+| Collision meshes simplified | Full visual mesh → MoveIt grinds to 1 FPS    |
+| Floating base = 6 virtual joints | Never parent torso to `world`             |
+
+```xml
+<!-- Example floating base (critical!) -->
+<link name="world"/>
+<joint name="floating_base" type="floating">
+  <parent link="world"/>
+  <child link="pelvis"/>
+</joint>
+```
+
+Full G1 xacro shipped in `assets/models/humanoid_g1/urdf/g1.urdf.xacro`

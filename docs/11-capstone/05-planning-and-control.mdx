@@ -1,0 +1,17 @@
+---
+sidebar_position: 5
+title: "High-Level Planning & Execution"
+---
+
+# LLM Planner (Llama-3.1-70B or Grok)
+
+```python
+plan = llm_planner.generate(
+    user_command="bring me water",
+    scene_objects=["bottle_blue", "fridge", "table"],
+    robot_capabilities=["walk", "grasp", "open_fridge"]
+)
+# → ["navigate_to(table)", "grasp(bottle)", "navigate_to(fridge)", ...]
+```
+
+**Execution manager loops until plan complete or failure.**

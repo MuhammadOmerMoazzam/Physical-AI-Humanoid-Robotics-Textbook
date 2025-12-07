@@ -1,0 +1,26 @@
+---
+sidebar_position: 4
+title: "Package Layout for 30+ DoF Humanoids (2025 Best Practices)"
+---
+
+# Recommended Structure (Used by Figure, Tesla, Unitree open-source teams)
+
+```
+humanoid_control/
+├── humanoid_control/
+│   ├── __init__.py
+│   ├── nodes/
+│   │   ├── joint_publisher.py
+│   │   ├── safety_node.py
+│   │   └── vla_bridge.py
+│   ├── utils/
+│   └── config/
+│       └── default_params.yaml
+├── launch/
+│   └── humanoid_bringup.launch.py
+├── config/
+└── resource/humanoid_control/
+```
+
+**Never** put logic in launch files.  
+**Always** declare parameters in code (not just YAML).

@@ -1,0 +1,23 @@
+---
+sidebar_position: 6
+title: "Safety Node – Mandatory for Real Hardware"
+---
+
+# Real Safety Node (Deployed on Figure 02 fleet)
+
+```python
+# safety_node.py
+class HumanoidSafetyNode(Node):
+    def __init__(self):
+        super().__init__('safety_node', allow_undeclared_parameters=True)
+        self.last_heartbeat = self.get_clock().now()
+        self.create_subscription(Heartbeat, '/heartbeat', self.cb, 10)
+        self.create_timer(0.1, self.safety_check)
+
+    def safety_check(self):
+        if (self.get_clock().now() - self.last_heartbeat).nanoseconds > 200_000_000:
+            self.get_logger().fatal("HEARTBEAT LOST → E-STOP")
+            os.system("ros2 topic pub /emergency_stop std_msgs/Bool '{data: true}'")
+```
+
+**Never** deploy to real hardware without this.

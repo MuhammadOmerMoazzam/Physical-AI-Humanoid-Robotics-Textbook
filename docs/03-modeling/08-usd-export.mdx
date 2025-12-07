@@ -1,0 +1,15 @@
+---
+sidebar_position: 8
+title: "Export URDF → USD for Isaac Sim"
+---
+
+# One-Line Export (2025)
+
+```bash
+pip install urdf2usd
+urdf2usd g1.urdf.xacro g1.usd --output-physics
+```
+
+Drop `g1.usd` into Isaac Sim → instant PhysX + articulation support.
+
+No more manual rigging.

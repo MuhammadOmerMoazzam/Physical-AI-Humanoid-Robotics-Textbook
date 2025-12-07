@@ -1,0 +1,18 @@
+---
+sidebar_position: 2
+title: "2025 Showdown: Gazebo Harmonic vs Isaac Sim 2024.2"
+---
+
+# The Final Verdict (December 2025)
+
+| Feature                        | Gazebo Harmonic (2024)     | Isaac Sim 2024.2+               | Winner 2025 |
+|--------------------------------|-----------------------------|----------------------------------|-------------|
+| PhysX 5.3 + GPU acceleration   | No                        | Yes (native)                     | Isaac Sim   |
+| USD-native workflow            | No (SDF only)             | Yes (first-class)                | Isaac Sim   |
+| Parallel environments (1000+)  | ~50 max                   | 4096+ on RTX 4090                | Isaac Sim   |
+| Synthetic data + perfect labels| Limited                   | Built-in Replicator              | Isaac Sim   |
+| ROS 2 bridge quality           | Good                      | Perfect (official NVIDIA)        | Isaac Sim   |
+| Bipedal stability out-of-box   | Falls constantly          | Robust with default tuning       | Isaac Sim   |
+
+**Conclusion:** Gazebo is still fine for education and simple arms.  
+**Isaac Sim is mandatory for any serious humanoid work in 2025.**

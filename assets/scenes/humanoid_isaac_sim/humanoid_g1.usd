@@ -1,0 +1,225 @@
+#usda 1.0
+(
+    doc = "G1 humanoid model for Isaac Sim"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "World"
+{
+    def Xform "humanoid_g1"
+    {
+        def Xform "pelvis"
+        {
+            def Capsule "pelvis_visual"
+            {
+                double radius = 0.1
+                double height = 0.1
+                color3f[] displayColor = [(0.5, 0.5, 0.5)]
+            }
+            
+            def Xform "left_leg"
+            {
+                def Xform "left_hip"
+                {
+                    def Capsule "left_hip_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "left_thigh"
+                {
+                    def Capsule "left_thigh_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.5
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "left_shin"
+                {
+                    def Capsule "left_shin_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.5
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "left_foot"
+                {
+                    def Cube "left_foot_visual"
+                    {
+                        double size = 0.1
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+            }
+            
+            def Xform "right_leg"
+            {
+                def Xform "right_hip"
+                {
+                    def Capsule "right_hip_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "right_thigh"
+                {
+                    def Capsule "right_thigh_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.5
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "right_shin"
+                {
+                    def Capsule "right_shin_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.5
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+                
+                def Xform "right_foot"
+                {
+                    def Cube "right_foot_visual"
+                    {
+                        double size = 0.1
+                        color3f[] displayColor = [(0.0, 0.0, 1.0)]
+                    }
+                }
+            }
+            
+            def Xform "torso"
+            {
+                def Capsule "torso_visual"
+                {
+                    double radius = 0.1
+                    double height = 0.4
+                    color3f[] displayColor = [(0.8, 0.8, 0.8)]
+                }
+            }
+            
+            def Xform "head"
+            {
+                def Sphere "head_visual"
+                {
+                    double radius = 0.1
+                    color3f[] displayColor = [(1.0, 0.5, 0.0)]
+                }
+            }
+            
+            def Xform "left_arm"
+            {
+                def Xform "left_shoulder"
+                {
+                    def Cube "left_shoulder_visual"
+                    {
+                        double size = 0.1
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "left_upper_arm"
+                {
+                    def Capsule "left_upper_arm_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "left_forearm"
+                {
+                    def Capsule "left_forearm_visual"
+                    {
+                        double radius = 0.04
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "left_hand"
+                {
+                    def Cube "left_hand_visual"
+                    {
+                        double size = 0.05
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+            }
+            
+            def Xform "right_arm"
+            {
+                def Xform "right_shoulder"
+                {
+                    def Cube "right_shoulder_visual"
+                    {
+                        double size = 0.1
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "right_upper_arm"
+                {
+                    def Capsule "right_upper_arm_visual"
+                    {
+                        double radius = 0.05
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "right_forearm"
+                {
+                    def Capsule "right_forearm_visual"
+                    {
+                        double radius = 0.04
+                        double height = 0.2
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+                
+                def Xform "right_hand"
+                {
+                    def Cube "right_hand_visual"
+                    {
+                        double size = 0.05
+                        color3f[] displayColor = [(0.0, 1.0, 0.0)]
+                    }
+                }
+            }
+        }
+    }
+    
+    def Xform "ground_plane"
+    {
+        def Plane "ground_plane_visual"
+        {
+            double size = 10.0
+            color3f[] displayColor = [(0.3, 0.3, 0.3)]
+        }
+    }
+    
+    def Xform "environment_factory"
+    {
+        def Cube "factory_walls"
+        {
+            vector3f size = (20, 1, 15)
+            color3f[] displayColor = [(0.5, 0.5, 0.5)]
+        }
+    }
+}

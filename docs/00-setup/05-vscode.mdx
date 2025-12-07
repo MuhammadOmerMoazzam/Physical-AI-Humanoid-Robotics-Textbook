@@ -1,0 +1,33 @@
+---
+sidebar_position: 5
+title: "VS Code – Your Robot IDE"
+---
+
+# VS Code Configuration
+
+**.vscode/settings.json** (auto-included in repo)
+```json
+{
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "ros.distro": "iron",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "/opt/ros/iron/include/**"
+  ],
+  "files.associations": {
+    "*.xacro": "xml",
+    "*.urdf": "xml",
+    "*.launch.py": "python"
+  }
+}
+```
+
+**Must-have extensions** (already in devcontainer.json):
+- ROS (ms-ros.vscode-ros)
+- Python
+- Pylance
+- C/C++
+- Docker
+- GitLens
+
+You're now faster than 99% of robotics labs.

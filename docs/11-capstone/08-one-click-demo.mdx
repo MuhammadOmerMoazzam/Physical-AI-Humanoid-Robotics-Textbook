@@ -1,0 +1,27 @@
+---
+sidebar_position: 8
+title: "One-Click Demo – Run the Future Now"
+---
+
+# THREE TERMINALS. THAT'S IT.
+
+```bash
+# Terminal 1 – Isaac Sim (or real robot)
+./isaac-sim.sh capstone/isaac_sim_scenes/kitchen_conversational_humanoid.usd
+
+# Terminal 2 – Full ROS 2 stack
+ros2 launch capstone_bringup capstone_full.launch.py use_sim:=true
+
+# Terminal 3 – Speak naturally
+python speak_to_robot.py
+# → "Good morning. Please clean the table and bring me a cold water."
+```
+
+**Watch 4–7 minutes of pure magic.**
+
+**Or deploy to real Unitree G1 / Figure-class robot:**
+```bash
+ros2 launch capstone_bringup capstone_full.launch.py use_sim:=false robot_ip:=192.168.1.42
+```
+
+**You have officially built a real autonomous conversational humanoid — in 2025 — with open tools.**

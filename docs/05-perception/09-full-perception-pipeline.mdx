@@ -1,0 +1,25 @@
+---
+sidebar_position: 9
+title: "Full Launchable Perception Pipeline"
+---
+
+# One-Click Bringup (Real or Simulated)
+
+```bash
+# Real hardware (Jetson)
+ros2 launch perception_pipeline perception_bringup.launch.py use_sim:=false
+
+# Simulation (Isaac Sim + synthetic RealSense)
+ros2 launch perception_pipeline perception_bringup.launch.py use_sim:=true
+```
+
+You now see in RViz/Foxglove:
+- Live 3D map with loop closure
+- Tracked humans (bounding boxes + skeletons)
+- 6D poses of arbitrary objects
+- Robot pose with covariance
+- Fake laser scan for Nav2
+
+**Full source:** `src/perception_pipeline/`
+
+**Your humanoid now has better eyes than 99.9 % of humans in low light.**

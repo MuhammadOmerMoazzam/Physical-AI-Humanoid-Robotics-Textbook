@@ -1,0 +1,127 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * locally scoped CSS by default instead of the global CSS in this file. However,
+ * feel free to write more global style rules to override as many 
+ * Docusaurus components as you need to customize.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+}
+
+/* Custom styles for robotics textbook */
+.hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+}
+
+.features_row {
+  margin-bottom: 2rem;
+}
+
+.features_col {
+  padding: 1rem;
+}
+
+/* Style for code blocks with robotics content */
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+  border-radius: 8px;
+}
+
+/* Custom styling for admonitions */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition-note {
+  border-left-color: var(--ifm-color-info);
+}
+
+.admonition-tip {
+  border-left-color: var(--ifm-color-success);
+}
+
+.admonition-caution {
+  border-left-color: var(--ifm-color-warning);
+}
+
+.admonition-warning {
+  border-left-color: var(--ifm-color-danger);
+}
+
+/* Style for mermaid diagrams */
+.mermaid {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Style for images */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom style for interactive elements */
+.interactive-element {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .interactive-element {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Style for tables */
+.table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Style for navigation */
+.navbar--fixed-top {
+  z-index: 2000;
+}
+
+/* Style for footer */
+.footer {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 2rem 0;
+}
+
+/* Style for highlight */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}

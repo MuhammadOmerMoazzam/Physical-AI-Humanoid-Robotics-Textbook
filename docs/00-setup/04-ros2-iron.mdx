@@ -1,0 +1,29 @@
+---
+sidebar_position: 4
+title: "ROS 2 Iron Irwini – 2025-native Install"
+---
+
+# ROS 2 Iron – The Last Version You'll Ever Need
+
+```bash
+sudo apt update && sudo apt install -y curl gnupg lsb-release
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update
+sudo apt install -y ros-iron-desktop ros-dev-tools python3-colcon-common-extensions
+echo "source /opt/ros/iron/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+**Test**
+```bash
+ros2 topic list
+# Should show nothing (no nodes running) → success!
+```
+
+### ROS 2 + Isaac Sim Bridge (2025 version)
+```bash
+pip install "omni.isaac.ros2_bridge"
+```
+
+That's it. No more 2022-era headaches.

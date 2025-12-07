@@ -1,0 +1,30 @@
+# assets/controllers/raise_unitree_g1_params.yaml
+# RAISE Controller Parameters for Unitree G1
+raise_controller:
+  robot_model: "unitree_g1"
+  policy_checkpoint: "g1_walk_robust.pt"
+  control_frequency: 100  # Hz
+  observation_space:
+    dimension: 100
+    joint_positions: true
+    joint_velocities: true
+    imu_data: true
+    foot_contacts: true
+  action_space:
+    dimension: 36  # 36 DoF
+    joint_torques: true
+  network_architecture:
+    hidden_layers: [512, 512, 512]
+    recurrent_units: 256
+    activation: "tanh"
+  training_data:
+    push_recovery_force: 350  # Newtons
+    max_speed: 2.51  # m/s
+    terrain_tolerance: 0.12  # meters
+  sim_to_real_gap:
+    velocity_error: 0.04  # m/s
+    stability_margins: 0.95
+  safety_limits:
+    max_joint_torque: 80  # N*m
+    max_base_velocity: 3.0  # m/s
+    fall_threshold: 0.3  # radians

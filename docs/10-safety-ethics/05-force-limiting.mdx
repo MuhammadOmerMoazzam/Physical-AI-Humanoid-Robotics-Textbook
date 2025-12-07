@@ -1,0 +1,19 @@
+---
+sidebar_position: 5
+title: "Force Limiting – Torque Monitoring at 1 kHz"
+---
+
+# Real-Time Torque Safety Layer
+
+```cpp
+// In joint controller callback (1 kHz)
+for each joint:
+    measured_torque = current_sensor - gravity_compensation
+    if abs(measured_torque) > TORQUE_LIMIT[joint]:
+        trigger_safety_stop()
+```
+
+**2025 limits (ISO/TS 15066 body region map):**
+- Head/Neck: 65 N / 120 N·s
+- Torso: 110 N / 190 N·s
+- Hand/Arm: 140 N / 280 N·s

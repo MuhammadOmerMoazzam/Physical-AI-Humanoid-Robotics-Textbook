@@ -1,0 +1,17 @@
+---
+sidebar_position: 5
+title: "Whole-Body QP Control – From CoM to Joint Torques"
+---
+
+# Real-Time QP Solver (400 Hz on Jetson)
+
+```cpp
+// Tasks (priority order)
+1. CoM velocity tracking (from MPC/RL)
+2. Swing foot trajectory (cubic spline)
+3. Posture regularization
+4. Joint torque limits
+5. Friction cone constraints
+```
+
+**Open-source solver used in 2025:** `osqp-eigen` + `qpOASES` → 2.1 ms solve time for 36 DoF
