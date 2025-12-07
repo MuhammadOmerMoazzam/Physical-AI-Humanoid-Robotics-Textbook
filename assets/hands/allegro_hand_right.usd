@@ -1,0 +1,205 @@
+#usda 1.0
+(
+    doc = "Allegro Hand Right - Simplified model for Isaac Sim"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "AllegroHandRight"
+{
+    def Xform "palm"
+    {
+        def Capsule "palm_visual"
+        {
+            double radius = 0.04
+            double height = 0.1
+            color3f[] displayColor = [(0.5, 0.5, 0.5)]
+        }
+    }
+    
+    def Xform "index"
+    {
+        def Xform "index_knuckle"
+        {
+            def Capsule "index_knuckle_visual"
+            {
+                double radius = 0.01
+                double height = 0.02
+                color3f[] displayColor = [(0.3, 0.3, 0.3)]
+            }
+            
+            def Xform "index_proximal"
+            {
+                def Capsule "index_proximal_visual"
+                {
+                    double radius = 0.01
+                    double height = 0.03
+                    color3f[] displayColor = [(0.2, 0.2, 0.2)]
+                }
+                
+                def Xform "index_middle"
+                {
+                    def Capsule "index_middle_visual"
+                    {
+                        double radius = 0.01
+                        double height = 0.025
+                        color3f[] displayColor = [(0.3, 0.3, 0.3)]
+                    }
+                    
+                    def Xform "index_distal"
+                    {
+                        def Capsule "index_distal_visual"
+                        {
+                            double radius = 0.008
+                            double height = 0.02
+                            color3f[] displayColor = [(0.4, 0.4, 0.4)]
+                        }
+                        
+                        def Sphere "index_tip_visual"
+                        {
+                            double radius = 0.008
+                            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    def Xform "middle"
+    {
+        def Xform "middle_knuckle"
+        {
+            def Capsule "middle_knuckle_visual"
+            {
+                double radius = 0.01
+                double height = 0.02
+                color3f[] displayColor = [(0.3, 0.3, 0.3)]
+            }
+            
+            def Xform "middle_proximal"
+            {
+                def Capsule "middle_proximal_visual"
+                {
+                    double radius = 0.01
+                    double height = 0.035
+                    color3f[] displayColor = [(0.2, 0.2, 0.2)]
+                }
+                
+                def Xform "middle_middle"
+                {
+                    def Capsule "middle_middle_visual"
+                    {
+                        double radius = 0.01
+                        double height = 0.025
+                        color3f[] displayColor = [(0.3, 0.3, 0.3)]
+                    }
+                    
+                    def Xform "middle_distal"
+                    {
+                        def Capsule "middle_distal_visual"
+                        {
+                            double radius = 0.008
+                            double height = 0.02
+                            color3f[] displayColor = [(0.4, 0.4, 0.4)]
+                        }
+                        
+                        def Sphere "middle_tip_visual"
+                        {
+                            double radius = 0.008
+                            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    def Xform "ring"
+    {
+        def Xform "ring_knuckle"
+        {
+            def Capsule "ring_knuckle_visual"
+            {
+                double radius = 0.01
+                double height = 0.02
+                color3f[] displayColor = [(0.3, 0.3, 0.3)]
+            }
+            
+            def Xform "ring_proximal"
+            {
+                def Capsule "ring_proximal_visual"
+                {
+                    double radius = 0.01
+                    double height = 0.03
+                    color3f[] displayColor = [(0.2, 0.2, 0.2)]
+                }
+                
+                def Xform "ring_middle"
+                {
+                    def Capsule "ring_middle_visual"
+                    {
+                        double radius = 0.01
+                        double height = 0.025
+                        color3f[] displayColor = [(0.3, 0.3, 0.3)]
+                    }
+                    
+                    def Xform "ring_distal"
+                    {
+                        def Capsule "ring_distal_visual"
+                        {
+                            double radius = 0.008
+                            double height = 0.02
+                            color3f[] displayColor = [(0.4, 0.4, 0.4)]
+                        }
+                        
+                        def Sphere "ring_tip_visual"
+                        {
+                            double radius = 0.008
+                            color3f[] displayColor = [(0.6, 0.6, 0.6)]
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    def Xform "thumb"
+    {
+        def Xform "thumb_knuckle"
+        {
+            def Capsule "thumb_knuckle_visual"
+            {
+                double radius = 0.012
+                double height = 0.025
+                color3f[] displayColor = [(0.3, 0.3, 0.3)]
+            }
+            
+            def Xform "thumb_proximal"
+            {
+                def Capsule "thumb_proximal_visual"
+                {
+                    double radius = 0.012
+                    double height = 0.035
+                    color3f[] displayColor = [(0.2, 0.2, 0.2)]
+                }
+                
+                def Xform "thumb_distal"
+                {
+                    def Capsule "thumb_distal_visual"
+                    {
+                        double radius = 0.01
+                        double height = 0.025
+                        color3f[] displayColor = [(0.3, 0.3, 0.3)]
+                    }
+                    
+                    def Sphere "thumb_tip_visual"
+                    {
+                        double radius = 0.01
+                        color3f[] displayColor = [(0.6, 0.6, 0.6)]
+                    }
+                }
+            }
+        }
+    }
+}

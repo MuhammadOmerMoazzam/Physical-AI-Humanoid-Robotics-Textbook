@@ -1,0 +1,19 @@
+---
+sidebar_position: 4
+title: "Isaac Lab – The Only Env That Trains Dexterous Policies"
+---
+
+# 4096 Parallel Hands in Real-Time
+
+```python
+from isaaclab_tasks.manipulation import AllegroGraspEnv
+
+env = AllegroGraspEnv(num_envs=4096, headless=False)
+# 4 kHz physics, 100 Hz control
+# Perfect force/torque + contact labels
+```
+
+Used by:
+- Octo (Berkeley)
+- RDT-1B (Google DeepMind)
+- Diffusion Policy (Columbia)

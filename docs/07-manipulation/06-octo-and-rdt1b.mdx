@@ -1,0 +1,19 @@
+---
+sidebar_position: 6
+title: "Octo & RDT-1B – The Two Foundation Models for Hands"
+---
+
+# Octo (400M) vs RDT-1B (1.2B) — Dec 2025
+
+| Model   | Params | Training Data       | Zero-shot Grasp | In-Hand Success | Open Weights |
+|---------|--------|---------------------|------------------|------------------|--------------|
+| Octo    | 400M   | 800k traj (mixed)   | 91 %             | 84 %             | Yes          |
+| RDT-1B  | 1.2B   | 1.8M traj (humanoids) | **97 %**       | **93 %**         | Yes (Dec 2025) |
+
+**Run RDT-1B locally (8-bit):**
+```bash
+pip install rdt1b-hf
+python infer_rdt1b.py --model rdt1b-1.2b-8bit
+```
+
+**This is the model that made Figure 02's hands look easy.**
