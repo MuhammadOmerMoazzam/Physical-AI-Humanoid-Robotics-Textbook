@@ -1,0 +1,8 @@
+{
+  "label": "05 – Perception Stack for Humanoids",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "From raw photons to 6D object poses at 30+ FPS on edge hardware"
+  }
+}

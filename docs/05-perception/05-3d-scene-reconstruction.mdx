@@ -1,0 +1,20 @@
+---
+sidebar_position: 5
+title: "3D Scene Reconstruction & Octree Mapping"
+---
+
+# Live OctoMap from Depth
+
+```yaml
+# config/octomap_server.yaml
+resolution: 0.01
+frame_id: "map"
+sensor_model/max_range: 5.0
+```
+
+Launch:
+```bash
+ros2 launch octomap_server octomap_mapping.launch.py
+```
+
+Result: Real-time 1 cm voxel map used by Nav2 and manipulation planners.

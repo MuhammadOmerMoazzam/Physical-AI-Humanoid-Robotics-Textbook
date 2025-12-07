@@ -1,0 +1,43 @@
+# config/realsense.yaml
+/**:
+  ros__parameters:
+    # General parameters
+    enable_color: true
+    enable_depth: true
+    enable_gyro: true
+    enable_accel: true
+    align_depth.enable: true
+    pointcloud.enable: true
+    
+    # Color camera parameters
+    color_width: 1280
+    color_height: 720
+    color_fps: 30
+    
+    # Depth camera parameters
+    depth_width: 1280
+    depth_height: 720
+    depth_fps: 90
+    
+    # IMU parameters
+    gyro_fps: 400
+    accel_fps: 200
+    
+    # Processing parameters
+    enable_infra1: false
+    enable_infra2: false
+    enable_rectify_depth: true
+    filters: "pointcloud,disparity,spatial,temporal,decimation"
+    
+    # Depth module parameters
+    depth_module.profile: "1280x720x90"
+    depth_module.enable_auto_exposure: true
+    depth_module.exposure: 8500
+    depth_module.gain: 16
+    depth_module.laser_power: 150
+    
+    # Color module parameters
+    rgb_camera.profile: "1280x720x30"
+    rgb_camera.enable_auto_exposure: true
+    rgb_camera.exposure: 150
+    rgb_camera.gain: 16

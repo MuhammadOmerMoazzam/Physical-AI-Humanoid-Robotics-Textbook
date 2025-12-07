@@ -1,0 +1,25 @@
+{
+    "robot_base_frame": "base_link",
+    "robot_effector_frame": "camera_color_frame",
+    "tracking_frame": "aruco_marker_frame",
+    "sensor_frame": "camera_color_frame",
+    "sensor_optical_frame": "camera_color_optical_frame",
+    "calibration_timeout": 60,
+    "marker_size": 0.034,
+    "aruco_board_size": 3,
+    "calibration_method": "easy_handeye",
+    "calibration_file": "realsense_handeye_calib.json",
+    "calibration_result": {
+        "rotation": [0.01, -0.02, 0.999, 0.005, 0.999, 0.01, -1.0, 0.003, 0.02],
+        "translation": [0.05, -0.03, 0.12],
+        "transform": {
+            "x": 0.05,
+            "y": -0.03,
+            "z": 0.12,
+            "qx": 0.01,
+            "qy": -0.02,
+            "qz": 0.005,
+            "qw": 0.999
+        }
+    }
+}
