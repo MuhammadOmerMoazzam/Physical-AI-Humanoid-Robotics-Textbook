@@ -1,0 +1,19 @@
+---
+sidebar_position: 3
+title: "OpenVLA-7B – The People’s VLA"
+---
+
+# One-Command Inference (7B on single GPU)
+
+```bash
+pip install openvla-prismatic
+python -m openvla.scripts.serve --model-name openvla-7b --port 8080
+```
+
+```python
+from openvla import OpenVLA
+vla = OpenVLA.from_pretrained("openvla-7b")
+action = vla.predict(image, "pick up the blue block")
+```
+
+**94 % success on real Franka arm — zero fine-tuning.**
