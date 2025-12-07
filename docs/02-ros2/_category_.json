@@ -1,0 +1,8 @@
+{
+  "label": "02 – ROS 2: The Robotic Nervous System",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Master ROS 2 for 30+ DoF humanoids in one chapter"
+  }
+}
