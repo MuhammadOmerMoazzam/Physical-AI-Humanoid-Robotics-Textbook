@@ -1,0 +1,26 @@
+---
+sidebar_position: 3
+title: "The Three Data Engines That Unlocked Humanoids"
+---
+
+# The Three Data Engines (2023–2025)
+
+| Engine              | Scale in 2025             | Primary Source                          | Breakthrough Paper / Dataset               |
+|---------------------|---------------------------|-----------------------------------------|--------------------------------------------|
+| Internet Video      | >150 million hours        | YouTube, TikTok, Instagram Reels        | Ego4D [2], Something-Something-V2 [3]      |
+| Teleoperation       | >25 million trajectories  | Fleet learning (Figure, Tesla, Sanctuary)| DROID [4], Bridge Data V2 [5]              |
+| Simulation          | >2 billion robot-hours    | Isaac Sim, MuJoCo, PyBullet, Isaac Lab  | Orbit [6], Isaac Gym [7] → Isaac Lab 2025  |
+
+```mermaid
+graph TD
+    A[Internet Video] --> D[Self-Supervised Pretraining]
+    B[Teleoperation] --> E[High-Quality Imitation Data]
+    C[Simulation + RL] --> F[Infinite Diverse Experience]
+    D --> G[Foundation Models for Robotics]
+    E --> G
+    F --> G
+    G --> H[General-Purpose Humanoid Controllers]
+```
+
+> "The robotics data moat is now larger than the language data moat was in 2021."  
+> — Pieter Abbeel, Covariant, March 2025
