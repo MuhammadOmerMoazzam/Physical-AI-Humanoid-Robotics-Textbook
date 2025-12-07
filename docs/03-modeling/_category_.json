@@ -1,0 +1,8 @@
+{
+  "label": "03 – Modeling Humanoids: URDF, SRDF & MoveIt 2",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "From CAD to collision-aware whole-body planning in one chapter"
+  }
+}

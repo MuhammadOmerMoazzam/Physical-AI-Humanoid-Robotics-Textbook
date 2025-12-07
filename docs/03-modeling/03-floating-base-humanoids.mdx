@@ -1,0 +1,24 @@
+---
+sidebar_position: 3
+title: "Floating-Base Humanoids – The Correct Kinematic Tree"
+---
+
+# Standard 36-DoF Humanoid Tree (2025)
+
+```mermaid
+graph TD
+    pelvis --> left_hip[Left Hip (3)]
+    pelvis --> right_hip[Right Hip (3)]
+    pelvis --> waist[Waist (1)]
+    waist --> torso
+    torso --> left_shoulder[Left Shoulder (3)]
+    torso --> right_shoulder[Right Shoulder (3)]
+    torso --> neck[Neck (2)]
+    left_shoulder --> left_elbow[Elbow (1)]
+    right_shoulder --> right_elbow[Elbow (1)]
+    left_elbow --> left_wrist[Left Wrist (3)]
+    right_elbow --> right_wrist[Right Wrist (3)]
+    neck --> head[Head]
+```
+
+Total: 6 (floating) + 30 actuated = 36 DoF

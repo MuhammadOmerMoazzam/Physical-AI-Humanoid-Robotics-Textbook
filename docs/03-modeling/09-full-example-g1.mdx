@@ -1,0 +1,23 @@
+---
+sidebar_position: 9
+title: "Full Working Example – Unitree G1 MoveIt Control"
+---
+
+# Launch Everything
+
+```bash
+# Terminal 1
+ros2 launch humanoid_moveit_config demo.launch.py
+
+# Terminal 2 (Isaac Sim)
+isaac-sim.sh --/app/window/fullscreen=true
+
+# Terminal 3 – Run our demo
+ros2 run humanoid_control moveit_wave_demo.py
+```
+
+Watch in RViz + Isaac Sim: the G1 waves while avoiding self-collision and a table.
+
+**Full source:** `src/humanoid_moveit_demo/`
+
+**You have now mastered kinematic modeling of state-of-the-art humanoids.**

@@ -1,0 +1,45 @@
+# Joint limits for G1 humanoid robot
+# In practice, this would be a full MoveIt configuration
+
+# Example joint limits (in radians)
+left_hip_yaw_lower_limit: -1.57
+left_hip_yaw_upper_limit: 1.57
+left_hip_roll_lower_limit: -1.57
+left_hip_roll_upper_limit: 1.57
+left_knee_lower_limit: -1.57
+left_knee_upper_limit: 1.57
+left_ankle_lower_limit: -1.05
+left_ankle_upper_limit: 1.05
+
+right_hip_yaw_lower_limit: -1.57
+right_hip_yaw_upper_limit: 1.57
+right_hip_roll_lower_limit: -1.57
+right_hip_roll_upper_limit: 1.57
+right_knee_lower_limit: -1.57
+right_knee_upper_limit: 1.57
+right_ankle_lower_limit: -1.05
+right_ankle_upper_limit: 1.05
+
+waist_yaw_lower_limit: -1.05
+waist_yaw_upper_limit: 1.05
+
+neck_yaw_lower_limit: -1.05
+neck_yaw_upper_limit: 1.05
+
+left_shoulder_yaw_lower_limit: -1.05
+left_shoulder_yaw_upper_limit: 1.05
+left_shoulder_roll_lower_limit: -1.57
+left_shoulder_roll_upper_limit: 1.57
+left_elbow_lower_limit: -1.57
+left_elbow_upper_limit: 1.57
+left_wrist_yaw_lower_limit: -1.05
+left_wrist_yaw_upper_limit: 1.05
+
+right_shoulder_yaw_lower_limit: -1.05
+right_shoulder_yaw_upper_limit: 1.05
+right_shoulder_roll_lower_limit: -1.57
+right_shoulder_roll_upper_limit: 1.57
+right_elbow_lower_limit: -1.57
+right_elbow_upper_limit: 1.57
+right_wrist_yaw_lower_limit: -1.05
+right_wrist_yaw_upper_limit: 1.05
