@@ -1,0 +1,39 @@
+---
+sidebar_position: 5
+title: "Launch Systems – Python, Composable Nodes, and Arguments"
+---
+
+# Modern Launch (2025)
+
+```python
+# launch/spawn_humanoid.launch.py
+from launch import LaunchDescription
+from launch_ros.actions import Node, ComposableNodeContainer
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+
+def generate_launch_description():
+    return LaunchDescription([
+        DeclareLaunchArgument('use_sim', default_value='true'),
+        ComposableNodeContainer(
+            name='humanoid_container',
+            namespace='',
+            package='rclcpp_components',
+            executable='component_container',
+            composable_node_descriptions=[
+                # All heavy nodes live here → single process
+            ],
+        ),
+        Node(
+            package='humanoid_control',
+            executable='joint_publisher.py',
+            name='wave_demo',
+            parameters=[{'use_sim': LaunchConfiguration('use_sim')}]
+        )
+    ])
+```
+
+Run:
+```bash
+ros2 launch humanoid_control spawn_humanoid.launch.py use_sim:=true
+```

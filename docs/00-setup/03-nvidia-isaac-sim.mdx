@@ -1,0 +1,30 @@
+---
+sidebar_position: 3
+title: "NVIDIA Isaac Sim 2024.2+ Installation"
+---
+
+# Isaac Sim 2024.2+ – The Only Simulator That Matters in 2025
+
+### One-command install (inside devcontainer)
+```bash
+wget https://developer.download.nvidia.com/omniverse/isaac-sim/2024.2/isaac-sim_2024.2.0-linux.x86_64.run
+chmod +x isaac-sim_2024.2.0-linux.x86_64.run
+./isaac-sim_2024.2.0-linux.x86_64.run --nox11 --prefix $HOME/isaac_sim
+echo 'export PATH=$HOME/isaac_sim:$PATH' >> ~/.bashrc
+```
+
+### First launch (takes ~2 minutes)
+```bash
+isaac-sim.sh
+```
+
+You should see the Omniverse launcher → click "Isaac Sim" → new empty scene.
+
+**License tip:** Use your free NVIDIA Developer account (no cost for academic use).
+
+**Verification script** (run this)
+```bash
+python3 -c "from omni.isaac.kit import SimulationApp; simulation_app = SimulationApp({'headless': True}); print('Isaac Sim OK'); simulation_app.close()"
+```
+
+→ If you see "Isaac Sim OK" → you're golden.

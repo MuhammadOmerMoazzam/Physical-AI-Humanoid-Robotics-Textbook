@@ -1,0 +1,21 @@
+---
+sidebar_position: 7
+title: "Whole-Body Planning with Task Priorities"
+---
+
+# Example: Walk + Wave (2025 SOTA)
+
+```python
+from moveit_msgs.msg import Constraints, JointConstraint, PositionConstraint
+
+# Goal: right hand at [1.0, -0.3, 1.2], pelvis stays near origin
+goal = PlanningOptions()
+goal.planning_scene_diff.robot_state.is_diff = True
+
+# High-priority: keep pelvis near start pos
+pos_const = PositionConstraint()
+pos_const.link_name = "pelvis"
+pos_const.target_point_offset.x = 0.1 # tolerance
+```
+
+2025: Use **Task Space Regions (TSR)** + **CHOMP** → smooth human-like motion.

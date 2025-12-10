@@ -1,0 +1,19 @@
+---
+sidebar_position: 7
+title: "ROS 2 ↔ Isaac Sim Bridge (Official 2025)"
+---
+
+# One-Line Bridge
+
+```bash
+pip install "omni.isaac.ros2_bridge==2024.2.1"
+```
+
+In Isaac Sim → Extensions → Enable:
+
+- ROS2 Bridge
+- Humanoid Articulation Support
+
+Now every `/joint_commands` topic automatically drives the simulated robot.
+
+**No custom code needed in 2025.**

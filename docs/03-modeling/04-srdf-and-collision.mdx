@@ -1,0 +1,14 @@
+---
+sidebar_position: 4
+title: "SRDF – Self-Collisions and Planning Groups"
+---
+
+# SRDF: The File That Makes MoveIt Fast
+
+```xml
+<!-- Disable adjacent body collisions -->
+<disable_collisions link1="left_upper_arm" link2="torso" reason="adjacent"/>
+<disable_collisions link1="right_upper_arm" link2="torso" reason="adjacent"/>
+```
+
+**2025 best practice:** Use `moveit_setup_assistant` → export → commit the generated SRDF. Never hand-write collision rules for >20 DoF.

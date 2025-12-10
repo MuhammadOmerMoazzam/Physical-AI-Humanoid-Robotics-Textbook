@@ -1,0 +1,25 @@
+---
+sidebar_position: 5
+title: "MoveIt 2 Setup in 90 Seconds (2025 Wizard)"
+---
+
+# One-Command MoveIt Config
+
+```bash
+ros2 run moveit_setup_assistant moveit_setup_assistant
+# → Load g1.urdf.xacro
+# → Create new config package: humanoid_moveit_config
+# → Auto-generate everything
+```
+
+Or use our pre-generated config (best for learning):
+```bash
+cp -r assets/models/humanoid_g1/moveit_config humanoid_moveit_config
+colcon build --packages-select humanoid_moveit_config
+```
+
+Done. You now have:
+
+- OMPL + Pilz + CHOMP planners
+- RViz plugin with MotionPlanning panel
+- Python/C++ APIs

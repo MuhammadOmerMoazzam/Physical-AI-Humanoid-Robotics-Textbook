@@ -1,0 +1,25 @@
+---
+sidebar_position: 6
+title: "First Run – Your Humanoid in 15 Minutes"
+---
+
+# First Run – See a Humanoid Move
+
+```bash
+git clone https://github.com/your-org/physical-ai-textbook.git
+cd physical-ai-textbook
+code . # opens VS Code
+
+# Wait for devcontainer → then in terminal:
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch chapter_00_demo spawn_humanoid.launch.py
+```
+
+You should now see in Isaac Sim:
+
+- A fully rigged 36-DoF humanoid
+- RViz2 showing joint states
+- Ability to publish joint commands with a slider
+
+**Congratulations** — you just joined the 2025 robotics elite.
