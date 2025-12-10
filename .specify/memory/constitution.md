@@ -1,55 +1,70 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: N/A (new constitution) → 1.0.0
+Added sections: Core Principles (6 principles), Key Standards, Constraints, Success Criteria
+Removed sections: None
+Modified principles: N/A (new principles)
+Templates requiring updates:
+- ✅ spec-template.md: Updated functional requirements to align with constitution
+- ⚠ N/A: plan-template.md, tasks-template.md (no changes needed - they reference constitution dynamically)
+Deferred items: RATIFICATION_DATE (TODO item intentionally left for later completion)
+-->
+
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Accuracy through Primary Source Verification
+Every factual claim must be traceable to reputable sources, with cross-referencing between multiple established robotics and AI literature to ensure veracity and reliability of the textbook content.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Academic and Technical Clarity
+Content must be written for an academic and technical audience, including students, researchers, and practitioners in AI, robotics, mechanical engineering, and related fields, with appropriate technical depth and accessible explanations.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Comprehensive Coverage
+The textbook must provide comprehensive coverage of foundational concepts, state-of-the-art methods, and practical applications in physical AI and humanoid robotics to serve as a complete educational resource.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Educational Focus
+All content must prioritize educational value with real-world examples, exercises, code snippets, and interactive elements where possible to enhance the learning experience and practical understanding.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Up-to-Date Content
+The textbook must integrate emerging trends in physical AI and humanoid robotics as of December 2025 and beyond, ensuring that readers receive current and relevant information on the rapidly evolving field.
 
-### [PRINCIPLE_6_NAME]
+### VI. Verifiable Technical Claims
+All technical claims must be 100% verifiable against cited sources with zero tolerance for plagiarism, and all code examples must execute correctly and be licensed openly (MIT or Apache 2.0).
 
+## Key Standards
 
-[PRINCIPLE__DESCRIPTION]
+- All factual claims must be traceable to reputable sources
+- Citation format: IEEE style (numeric references with full bibliography)
+- Source types: Minimum 50% peer-reviewed journal articles and conference papers (e.g., ICRA, IROS, RSS, Science Robotics, IJRR); remainder may include authoritative textbooks, technical reports, and credible industry whitepapers
+- Plagiarism check: 0% tolerance before final deployment (checked with tools such as Turnitin, GPTZero, or Copyleaks)
+- Writing clarity: Flesch-Kincaid grade level 12–14 (suitable for upper-undergraduate to graduate technical readers)
+- Tool usage: Spec-Kit Plus for spec-driven development and repository structure, and Claude Code for generating verifiable code examples, diagrams (Mermaid/PlantUML), and simulation snippets
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Format: Static website built with Docusaurus, deployed via GitHub Pages
+- Minimum 10 chapters (suggested outline available in separate spec)
+- Each chapter must include:
+  - Learning objectives
+  - Key concepts with citations
+  - Code examples (Python/ROS2 where applicable)
+  - Diagrams and illustrations
+  - End-of-chapter exercises or discussion questions
+- Interactive elements: CodeSandbox/Colab links, embedded Mermaid diagrams, and links to open-source simulators when relevant
+- Repository must follow Spec-Kit Plus template structure (specifications as first-class artifacts)
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Success Criteria
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- 100% of technical claims verified against cited sources
+- Zero plagiarism detected on final content
+- Successful deployment to GitHub Pages with full functionality (search, dark mode, responsive design, fast loading)
+- All code examples execute correctly and are licensed openly (MIT or Apache 2.0)
+- Positive internal review for educational value, depth, and completeness
+- Full alignment with Spec-Kit Plus workflow: every piece of content traceable to an approved specification
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development of the Physical AI & Humanoid Robotics Textbook project. All contributions must comply with these principles and standards. Amendments require documentation of changes, approval by project maintainers, and a migration plan for existing content when necessary. All pull requests and reviews must verify compliance with the principles outlined in this constitution. All content must be justified with clear educational or technical rationale, and the project uses this constitution as its primary guidance document for development decisions.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date to be determined | **Last Amended**: 2025-12-09
