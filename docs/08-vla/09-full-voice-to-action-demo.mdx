@@ -7,12 +7,13 @@ title: "Full Voice→Vision→Action Demo – Say Anything"
 
 ```bash
 # Terminal 1 – Isaac Sim + humanoid
-./isaac-sim.sh assets/scenes/kitchen_humanoid.usd
+./isaac-sim.sh assets/scenes/kitchen_conversational_humanoid.usd
 
-# Terminal 2 – Full stack
+# Terminal 2 – Full ROS 2 stack
 ros2 launch vla voice_to_humanoid.launch.py model:=rdt1b-1.2b-8bit
 
 # Terminal 3 – Speak into microphone
+python speak_to_robot.py
 # → "Please clean up the table and throw away the trash"
 ```
 

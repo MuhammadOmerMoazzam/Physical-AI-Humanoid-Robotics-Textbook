@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: "Emergency Stop – Cat 0 vs Cat 1 in Practice"
+title: "Emergency Stop – Category 0 vs Category 1 in Practice"
 ---
 
 # Production-Grade E-Stop Node (ships with this chapter)
@@ -10,12 +10,18 @@ title: "Emergency Stop – Cat 0 vs Cat 1 in Practice"
 class EStopMonitor(Node):
     def __init__(self):
         self.declare_parameter('estop_topic', '/emergency_stop')
-        self.sub = self.create_subscription(Bool, '/emergency_stop', self.cb, 1)
-        self.last_msg = self.get_clock().now()
-    
-    def cb(self, msg):
-        if msg.data:
+        self.estop_sub = self.create_subscription(
+            Bool,
+            '/emergency_stop',
+            self.estop_callback,
+            1
+        )
+        self.last_msg_time = self.get_clock().now()
+
+    def estop_callback(self, msg):
+        if msg.data:  # Emergency stop activated
             self.get_logger().fatal("E-STOP ACTIVATED → CUTTING POWER")
+            # Cut power to all actuators immediately
             os.system("ros2 service call /servo_power std_srvs/SetBool '{data: false}'")
 ```
 

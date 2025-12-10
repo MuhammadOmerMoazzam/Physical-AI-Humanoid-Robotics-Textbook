@@ -1,0 +1,104 @@
+# Docusaurus 3.5+ generated files
+.build/
+.dist/
+.out/
+.docusaurus/
+.temp/
+.cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.cjs
+.pnp.loader.mjs
+
+# Distribution / packaging
+.bundle.js
+*.min.js
+*.chunk.js
+public/build/
+
+# Dependency directories
+jspm_packages/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env*
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.lint/
+.output/
+.stats.json
+
+# Coverage reports
+coverage/
+.nyc_output/
+istanbul/
+.jestcov/
+
+# Browser sync
+.browser-sync/
+
+# ROS 2
+*.pyc
+__pycache__/
+*.so
+*.egg-info/
+.devel_space_env.sh
+.install_space_env.sh
+*.lock
+*.lock.*
+build/
+install/
+log/
+
+# Isaac Sim
+isaac_sim_logs/
+.cache/
+.isaac_sim/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Large files that should be in LFS
+*.bin
+*.bag
+*.usd
+*.usda
+*.usdc
+*.dae
+*.fbx
+*.obj
+*.ply
+*.stl
+*.urdf
+*.srdf
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+.swm
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

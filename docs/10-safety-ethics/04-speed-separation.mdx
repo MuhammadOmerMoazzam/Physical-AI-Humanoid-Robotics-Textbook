@@ -9,11 +9,12 @@ title: "Speed & Separation Monitoring – Real Implementation"
 # nodes/ssm_node.py
 max_speed = 0.0
 if closest_human_distance < 0.5:
-    max_speed = 0.0 # stop
+    max_speed = 0.0  # stop completely
 elif closest_human_distance < 1.5:
-    max_speed = 0.3 # protective speed
+    max_speed = 0.3  # protective speed
 else:
-    max_speed = 2.5 # full speed
+    max_speed = 2.5  # full speed allowed
+
 self.publish_speed_limit(max_speed)
 ```
 

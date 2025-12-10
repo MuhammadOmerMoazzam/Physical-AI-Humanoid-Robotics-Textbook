@@ -1,0 +1,61 @@
+/**
+ * Copyright (c) 2025 Physical AI & Humanoid Robotics Textbook
+ * Licensed under MIT License
+ */
+
+/* Custom CSS for Physical AI & Humanoid Robotics Textbook */
+
+:root {
+  --ifm-color-primary: #25c19f;
+  --ifm-color-primary-dark: #22ae8f;
+  --ifm-color-primary-darker: #20a486;
+  --ifm-color-primary-darkest: #1a876f;
+  --ifm-color-primary-light: #3cd3af;
+  --ifm-color-primary-lighter: #4dd6b5;
+  --ifm-color-primary-lightest: #70e0c7;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styles for robotics textbook */
+.hero--primary {
+  background: linear-gradient(135deg, #1a2a6c, #25c19f, #b21f1f);
+}
+
+.feature-image {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.code-block-experimental {
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+/* Styles for MDX components */
+.mdx-isaac-sim-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-primary-lightest);
+  border-radius: 8px;
+}
+
+/* Custom admonitions for robotics content */
+.alert--experimental {
+  border-left: 4px solid #ff6b6b;
+}
+
+.alert--hardware {
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.alert--safety {
+  border-left: 4px solid #f39c12;
+}

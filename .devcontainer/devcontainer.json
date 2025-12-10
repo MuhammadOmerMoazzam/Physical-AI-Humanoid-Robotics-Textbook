@@ -1,0 +1,22 @@
+{
+  "name": "Physical AI Textbook",
+  "image": "ghcr.io/your-org/physical-ai-devcontainer:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "bash /workspace/.devcontainer/post-create.sh",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-ros.vscode-ros",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
