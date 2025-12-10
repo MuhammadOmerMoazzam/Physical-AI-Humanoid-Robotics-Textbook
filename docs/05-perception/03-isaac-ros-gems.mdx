@@ -1,0 +1,20 @@
+---
+sidebar_position: 3
+title: "Isaac ROS 2 GEMs – NVIDIA's Gift to Robotics"
+---
+
+# The Only Perception Stack That Actually Works in 2025
+
+| GEM | Function | Hardware Acceleration | Real-time on Jetson? |
+|-------------------------|---------------------------------------|------------------------|----------------------|
+| Stereo V-SLAM | Visual-inertial odometry | CUDA + TensorRT | Yes (90 FPS) |
+| AprilTag | Fiducial detection | CUDA | Yes (1000+ tags/sec) |
+| PeopleSemSeg | Human detection + segmentation | TensorRT | Yes (60 FPS) |
+| FoundationPose | 6D pose estimation (no CAD needed) | TensorRT | Yes (30+ FPS) |
+| DepthImageToLaserScan | Fake LiDAR from depth | CUDA | Yes |
+
+**Install once:**
+```bash
+sudo apt install ros-iron-isaac-ros-visual-slam ros-iron-isaac-ros-apriltag \
+ros-iron-isaac-ros-foundationpose
+```

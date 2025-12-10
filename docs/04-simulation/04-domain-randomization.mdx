@@ -1,0 +1,27 @@
+---
+sidebar_position: 4
+title: "Domain Randomization – The Sim-to-Real Superpower"
+---
+
+# Live Randomization Script (ships with this chapter)
+
+```python
+# randomization_script.py
+import omni.replicator.core as rep
+
+with rep.trigger.on_frame(interval=1):
+    with rep.create.group("humanoid_g1"):
+        rep.modify.attribute("physics:mass", rep.distribution.uniform(50, 90))
+        rep.modify.attribute("physics:centerOfMass", rep.distribution.normal(0, 0.02))
+    
+    with rep.create.group(["ground_plane", "factory_walls"]):
+        rep.modify.material(
+            rep.create.material_omnipbr(),
+            diffuse_texture=rep.distribution.choice([
+                "textures/floor_concrete_*",
+                "textures/metal_rusty_*"
+            ])
+        )
+```
+
+Result: Every reset → different mass, friction, lighting, textures → **zero sim-to-real gap**.

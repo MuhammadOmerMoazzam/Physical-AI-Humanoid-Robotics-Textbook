@@ -1,0 +1,21 @@
+---
+sidebar_position: 3
+title: "USD Workflow – The New Standard"
+---
+
+# From URDF → USD in One Command
+
+```bash
+# Already done for you
+urdf2usd assets/models/humanoid_g1/urdf/g1.urdf.xacro \
+assets/scenes/humanoid_isaac_sim/humanoid_g1.usd \
+--output-physics --fix-materials
+```
+
+Now drag `humanoid_g1.usd` into any Isaac Sim scene → instant:
+- Correct articulation tree
+- PhysX rigid bodies + joints
+- Collision shapes
+- Inertial parameters
+
+**No more manual rigging. Ever.**

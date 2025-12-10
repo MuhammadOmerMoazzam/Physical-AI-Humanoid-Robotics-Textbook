@@ -1,0 +1,22 @@
+---
+sidebar_position: 6
+title: "Synthetic Data – Better Than Real (2025 Reality)"
+---
+
+# Replicator Script → 10M Perfectly Labeled Images
+
+```python
+writer = rep.WriterRegistry.get("BasicWriter")
+writer.initialize(
+    output_dir="/data/synthetic_humanoids",
+    rgb=True,
+    bounding_box_2d_tight=True,
+    semantic_segmentation=True,
+    instance_segmentation=True
+)
+
+with rep.trigger.on_interval(0.1):
+    rep.writer.write()
+```
+
+Output: 60 FPS RGB + perfect 2D/3D bounding boxes + depth + segmentation → Trains FoundationPose, Segment-Anything, and OpenVLA better than real data.

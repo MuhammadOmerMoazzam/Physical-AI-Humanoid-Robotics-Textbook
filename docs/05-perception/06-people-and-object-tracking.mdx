@@ -1,0 +1,19 @@
+---
+sidebar_position: 6
+title: "People + Object Tracking with FoundationPose"
+---
+
+# 6D Pose Without CAD (2025 Breakthrough)
+
+```bash
+ros2 launch isaac_ros_foundationpose foundationpose_tracking_live.launch.py \
+input_image:=/camera/color/image_raw \
+input_depth:=/camera/aligned_depth_to_color/image_raw
+```
+
+Outputs:
+- `/tracked_object_6d_pose` (geometry_msgs/PoseWithCovarianceStamped)
+- Works on first sight — no registration needed
+- 33 FPS on Jetson
+
+**This is the perception system that made "pick any object" real in 2025.**

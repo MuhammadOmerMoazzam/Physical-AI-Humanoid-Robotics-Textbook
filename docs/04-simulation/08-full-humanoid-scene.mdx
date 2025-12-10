@@ -1,0 +1,21 @@
+---
+sidebar_position: 8
+title: "Full Launchable Scene – 500 Randomized Humanoids"
+---
+
+# One-Click Launch (ships with this chapter)
+
+```bash
+# Terminal 1 – Isaac Sim
+./isaac-sim.sh --/app/window/fullscreen=false assets/scenes/humanoid_isaac_sim/factory_scene.usd
+
+# Terminal 2 – RL training
+python3 train_walking_isaaclab.py --num-envs 512 --headless
+
+# Terminal 3 – ROS 2 bridge
+ros2 launch isaac_sim_ros2_bridge humanoid_fleet.launch.py num_robots:=100
+```
+
+Watch 500+ humanoids learn to walk, fall, get back up — all differently randomized.
+
+**You now control the most powerful robotics simulation stack on Earth.**

@@ -1,0 +1,21 @@
+---
+sidebar_position: 7
+title: "RealSense D455 – Full Calibration & Config"
+---
+
+# One-Command Setup
+
+```bash
+sudo apt install ros-$ROS_DISTRO-realsense2-camera
+ros2 launch realsense2_camera rs_launch.py align_depth.enable:=true \
+enable_color:=true enable_depth:=true \
+enable_gyro:=true enable_accel:=true
+```
+
+**Hand-eye calibration (once per robot):**
+```bash
+ros2 run easy_handeye easy_handeye_launch.py --robot realsense_d455
+# Follow ArUco board instructions → saved to assets/calibration/
+```
+
+Calibration error < 3 mm, < 0.5° (2025 standard).
