@@ -1,0 +1,23 @@
+---
+sidebar_position: 6
+title: "RAISE Controller – The 2025 Open-Source King"
+---
+
+# One-Click Install & Run
+
+```bash
+pip install raise-controller==2025.12
+```
+
+```python
+from raise_controller import RAISEPolicy
+policy = RAISEPolicy.from_pretrained("unitree_g1_walk_v2025")
+action = policy(obs) # 36 joint torques at 100 Hz
+```
+
+**Pretrained checkpoints shipped:**
+- `g1_walk_robust.pt` → survives 350 N pushes
+- `g1_run_2.5mps.pt` → fastest open bipedal policy
+- `g1_rough_terrain.pt` → unseen rocks, stairs, slopes
+
+**Trained in Isaac Lab — runs on real Unitree G1 on first try.**

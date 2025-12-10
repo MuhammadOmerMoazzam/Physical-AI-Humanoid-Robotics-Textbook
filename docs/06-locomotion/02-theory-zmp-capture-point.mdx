@@ -1,0 +1,21 @@
+---
+sidebar_position: 2
+title: "Theory: ZMP, Capture Point, and DCM"
+---
+
+# Core Theory That Still Rules in 2025
+
+```mermaid
+graph LR
+CoM[Center of Mass] --> ZMP[Zero Moment Point]
+ZMP --> CP[Capture Point]
+CP --> DCM[Divergent Component of Motion]
+DCM --> Omega[ω = √(g/z₀)]
+```
+
+**Key equations (you must know cold):**
+- ZMP = CoMₓ − (CoM̈ₓ / ω²) × (CoM_z − ground)
+- ξ = x + ẋ / ω → Capture Point
+- ξ̇ = (ξ − ZMP) × ω → DCM dynamics
+
+> If DCM → 0 → robot is capturable (can stop without falling)

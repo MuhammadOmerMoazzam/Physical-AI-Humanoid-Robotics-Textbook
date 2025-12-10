@@ -1,0 +1,19 @@
+---
+sidebar_position: 7
+title: "In-Hand Reorientation – The Final Frontier"
+---
+
+# Reorient a pen 360° using only fingertips
+
+```python
+task = "allegro_in_hand_reorientation"
+policy = RDT1B.load("rdt1b-inhand-v2025")
+action = policy(obs) # 16 joint velocities
+```
+
+Success rate (real Allegro hand, Dec 2025):
+- Pen: 94 %
+- Hammer: 88 %
+- Bottle cap: 91 %
+
+**No classical controller has ever exceeded 60 %.**

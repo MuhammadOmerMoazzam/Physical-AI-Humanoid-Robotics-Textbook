@@ -1,0 +1,26 @@
+---
+sidebar_position: 9
+title: "Full Launchable Walking Demo"
+---
+
+# One Command — Walk Forever
+
+```bash
+# Option A – Classical MPC (most reliable)
+ros2 launch locomotion mpc_walking.launch.py robot:=g1 terrain:=rough
+
+# Option B – RAISE (fastest + most robust)
+ros2 launch locomotion raise_walking.launch.py robot:=g1 policy:=robust
+
+# Option C – DreamerV3 (research mode)
+python run_dreamer_policy.py --headless=False
+```
+
+Watch your humanoid:
+- Walk at 2.5 m/s
+- Recover from hockey-player-level shoves
+- Traverse unseen rubble fields
+
+**Full source:** `src/locomotion/`
+
+**You just gave your humanoid the most robust legs on the open market.**

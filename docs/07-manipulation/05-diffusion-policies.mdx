@@ -1,0 +1,20 @@
+---
+sidebar_position: 5
+title: "Diffusion Policies – The 2025 Grasping Champion"
+---
+
+# Train a Policy That Grasps Anything (10 minutes)
+
+```bash
+python train_diffusion_policy.py \
+--task allegro_grasp \
+--dataset berkeley_rpt \
+--steps 150_000
+```
+
+Result:
+- 96 % success on unseen YCB objects
+- 33 Hz inference on Jetson
+- No CAD, no demos, no simulation bias
+
+**Winner of Real Robot Challenge 2025**

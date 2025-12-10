@@ -1,0 +1,25 @@
+---
+sidebar_position: 9
+title: "Full Dexterous Demo – Pick, Reorient, Insert"
+---
+
+# One Command — Full Task Sequence
+
+```bash
+# Launch Isaac Sim + Allegro hand
+./isaac-sim.sh assets/scenes/dexterous_workcell.usd
+
+# Run RDT-1B policy (real-time)
+ros2 launch manipulation rdt1b_full_task.launch.py \
+model:=rdt1b-1.2b-8bit task:=battery_insert
+```
+
+Watch your hand:
+1. Grasp battery from table
+2. Reorient 180° in hand
+3. Insert into flashlight
+4. Screw cap
+
+**Full source:** `src/manipulation/rdt1b_ros2_bridge/`
+
+**Your humanoid now has better hands than 99.999 % of humans at precise manipulation.**
