@@ -44,6 +44,7 @@ All technical claims must be 100% verifiable against cited sources with zero tol
 ## Constraints
 
 - Format: Static website built with Docusaurus, deployed via GitHub Pages
+- Minimum 4 modules
 - Minimum 10 chapters (suggested outline available in separate spec)
 - Each chapter must include:
   - Learning objectives
