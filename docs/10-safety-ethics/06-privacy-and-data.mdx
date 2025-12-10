@@ -1,0 +1,15 @@
+---
+sidebar_position: 6
+title: "Privacy – Always-On Cameras & Microphones"
+---
+
+# Legal Requirements (EU AI Act 2025)
+
+| Requirement | Implementation |
+|------------------------------|-----------------------------------------------------|
+| Explicit opt-in recording | LED + physical shutter switch |
+| On-device processing only | Whisper + VLA run locally, no cloud upload |
+| Data retention ≤ 24 h | Auto-delete policy in ROS bag recorder |
+| Right to be forgotten | `ros2 topic pub /delete_user_data std_msgs/Empty` |
+
+**Failure to comply = €35M fine per incident.**

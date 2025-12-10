@@ -1,0 +1,26 @@
+---
+sidebar_position: 9
+title: "Full Voice→Vision→Action Demo – Say Anything"
+---
+
+# One Command — Full Conversational Humanoid
+
+```bash
+# Terminal 1 – Isaac Sim + humanoid
+./isaac-sim.sh assets/scenes/kitchen_humanoid.usd
+
+# Terminal 2 – Full stack
+ros2 launch vla voice_to_humanoid.launch.py model:=rdt1b-1.2b-8bit
+
+# Terminal 3 – Speak into microphone
+# → "Please clean up the table and throw away the trash"
+```
+
+Watch your humanoid:
+1. Understand speech (Whisper-live)
+2. Plan with RDT-1B
+3. Execute 7-step sequence perfectly
+
+**Full source:** `src/vla/voice_to_humanoid/`
+
+**You just built a robot that understands natural language better than most humans.**

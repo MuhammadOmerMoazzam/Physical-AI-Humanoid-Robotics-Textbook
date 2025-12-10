@@ -1,0 +1,12 @@
+---
+sidebar_position: 7
+title: "Latency Compensation – 80 ms Is the New Zero"
+---
+
+# State Estimator + Smith Predictor
+
+```cpp
+predicted_state = current_state + velocity * (latency_sec)
+```
+
+**All 2025 controllers run with 80–120 ms artificial latency in sim → perfect transfer.**

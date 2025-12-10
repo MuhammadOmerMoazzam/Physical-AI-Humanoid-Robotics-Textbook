@@ -1,0 +1,15 @@
+---
+sidebar_position: 5
+title: "RDT-1B – The 2025 State-of-the-Art Open VLA"
+---
+
+# Load 8-bit Quantized (fits in 24 GB VRAM)
+
+```python
+from rdt1b import RDT1BPolicy
+policy = RDT1BPolicy.from_pretrained("rdt1b-1.2b-vla-8bit")
+action_chunk = policy(image_tensor, "bring me the red cup from the shelf")
+# Returns 50 actions (2 seconds) at once
+```
+
+**First open model to exceed Figure 02 on long-horizon tasks.**

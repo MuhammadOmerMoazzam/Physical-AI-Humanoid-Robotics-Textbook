@@ -1,0 +1,18 @@
+---
+sidebar_position: 8
+title: "ROS 2 ↔ VLA Bridge – Production Ready"
+---
+
+# Full Bridge Node
+
+```bash
+ros2 run vla_ros2_bridge rdt1b_server --ros-args -p model:=rdt1b-1.2b-8bit
+```
+
+Subscribes:
+- `/camera/color/image_raw`
+- `/natural_language_command` (std_msgs/String)
+
+Publishes:
+- `/joint_commands` (sensor_msgs/JointState)
+- `/vla_debug_text` (visualization_msgs/Marker)

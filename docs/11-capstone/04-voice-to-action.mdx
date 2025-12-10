@@ -1,0 +1,23 @@
+---
+sidebar_position: 4
+title: "Voice → Intent (Whisper + RDT-1B)"
+---
+
+# Real-Time Voice Pipeline
+
+```python
+# whisper_live + streaming
+while True:
+    audio_chunk = mic.read()
+    text = whisper_stream.transcribe(audio_chunk)
+    if text.endswith(".") or text.endswith("?"):
+        send_to_vla(text)
+```
+
+**RDT-1B receives:**
+```text
+[SYSTEM] You are a helpful home assistant humanoid.
+[USER] Please tidy the table and bring me a water bottle.
+```
+
+→ Outputs 2-second action chunks at 28 Hz

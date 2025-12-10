@@ -1,0 +1,14 @@
+---
+sidebar_position: 7
+title: "Action Chunking – From 10 Hz to 100 Hz Control"
+---
+
+# RDT-1B outputs 50 actions (2 sec) per forward pass
+
+```python
+# 28 Hz inference → 100 Hz control via interpolation
+for chunk in vla.stream(image, prompt):
+    execute_chunk(chunk) # linear interp to 100 Hz
+```
+
+No more jittery robot arms.

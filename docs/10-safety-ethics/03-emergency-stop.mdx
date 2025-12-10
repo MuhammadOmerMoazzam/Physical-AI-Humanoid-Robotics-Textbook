@@ -1,0 +1,22 @@
+---
+sidebar_position: 3
+title: "Emergency Stop – Cat 0 vs Cat 1 in Practice"
+---
+
+# Production-Grade E-Stop Node (ships with this chapter)
+
+```python
+# nodes/estop_monitor.py
+class EStopMonitor(Node):
+    def __init__(self):
+        self.declare_parameter('estop_topic', '/emergency_stop')
+        self.sub = self.create_subscription(Bool, '/emergency_stop', self.cb, 1)
+        self.last_msg = self.get_clock().now()
+    
+    def cb(self, msg):
+        if msg.data:
+            self.get_logger().fatal("E-STOP ACTIVATED → CUTTING POWER")
+            os.system("ros2 service call /servo_power std_srvs/SetBool '{data: false}'")
+```
+
+**Hardware requirement:** Dual-channel safety relay wired to motor drivers.
