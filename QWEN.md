@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.11, JavaScript/TypeScript (Docusaurus v3.5+), Markdown/MDX + Docusaurus 3.5+, ROS 2 Iron, Isaac Lab 2025.1, Isaac Sim 2025.1, RDT-1B, OpenVLA, Octo (4-module4-intelligence-transfer)
+- Git with LFS for large assets (models, videos), GitHub Pages for deployment (4-module4-intelligence-transfer)
+
+## Recent Changes
+- 4-module4-intelligence-transfer: Added Python 3.11, JavaScript/TypeScript (Docusaurus v3.5+), Markdown/MDX + Docusaurus 3.5+, ROS 2 Iron, Isaac Lab 2025.1, Isaac Sim 2025.1, RDT-1B, OpenVLA, Octo
