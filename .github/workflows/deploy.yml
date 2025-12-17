@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "004-module4-intelligence-transfer" ]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
