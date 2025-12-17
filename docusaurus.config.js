@@ -8,17 +8,17 @@
 const config = {
   title: 'Physical AI & Humanoid Robotics Textbook',
   tagline: 'The Definitive Open Textbook (2025 Edition)',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Set the production url of your site here
-  url: 'https://physical-ai.org',
+  url: 'https://muhammadomermoazzam.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/physical-ai-humanoid-robotics-textbook',
+  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-org', // Usually your GitHub org/user name.
+  organizationName: 'muhammadomermoazzam', // Usually your GitHub org/user name.
   projectName: 'physical-ai-humanoid-robotics-textbook', // Usually your repo name.
   trailingSlash: false,
 
@@ -40,10 +40,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false, // Disable blog for textbook
         theme: {
@@ -56,10 +52,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Physical AI Textbook',
+        title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Physical AI Logo',
           src: 'img/logo.svg',
@@ -72,13 +66,7 @@ const config = {
             label: 'Textbook',
           },
           {
-            type: 'doc',
-            position: 'left',
-            label: 'About',
-            docId: 'about/intro',
-          },
-          {
-            href: 'https://github.com/your-org/physical-ai-textbook',
+            href: 'https://github.com/MuhammadOmerMoazzam/Physical-AI-Humanoid-Robotics-Textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -88,23 +76,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Chapters',
+            title: 'Modules',
             items: [
               {
                 label: 'Module 1: Foundations',
-                to: '/docs/00-setup',
+                to: '/docs/setup/intro',
               },
               {
                 label: 'Module 2: Simulation',
-                to: '/docs/04-simulation',
+                to: '/docs/simulation/intro',
               },
               {
                 label: 'Module 3: Locomotion',
-                to: '/docs/06-locomotion',
+                to: '/docs/locomotion/intro',
               },
               {
                 label: 'Module 4: Intelligence',
-                to: '/docs/08-vla',
+                to: '/docs/vla/intro',
               },
             ],
           },
@@ -130,7 +118,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-org/physical-ai-textbook',
+                href: 'https://github.com/MuhammadOmerMoazzam/Physical-AI-Humanoid-Robotics-Textbook',
               },
             ],
           },
@@ -142,38 +130,6 @@ const config = {
         darkTheme: require('prism-react-renderer').themes.dracula,
       },
     }),
-
-  plugins: [
-    // Plugin for mathematical expressions
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'appendices',
-        path: 'docs/appendices',
-        routeBasePath: 'appendices',
-        sidebarPath: require.resolve('./sidebars-appendices.js'),
-      },
-    ],
-    // Extra functionality for GitHub Pages
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            to: '/docs/00-setup',
-            from: ['/docs', '/docs/intro'],
-          },
-        ],
-      },
-    ],
-    // PDF generation plugin
-    [
-      '@docusaurus/plugin-pnpm',
-      {
-        packageManager: 'pnpm',
-      }
-    ]
-  ],
 };
 
 module.exports = config;
